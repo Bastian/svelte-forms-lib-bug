@@ -1,6 +1,18 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
+	import { createForm } from "svelte-forms-lib";
+
+	createForm({
+      initialValues: {
+        title: "",
+        name: "",
+        email: ""
+      },
+      onSubmit: values => {
+        alert(JSON.stringify(values));
+      }
+    });
 </script>
 
 <header>
